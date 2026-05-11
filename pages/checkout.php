@@ -142,6 +142,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="/wanbubu/" class="logo">🥗 Wanbubu</a>
         <div class="nav-links">
             <a href="/wanbubu/pages/cart.php">← Keranjang</a>
+            <a href="/wanbubu/pages/orders.php">📋 Pesanan Saya</a>
         </div>
     </nav>
     

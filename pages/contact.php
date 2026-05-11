@@ -46,6 +46,7 @@ Session::start();
             <a href="/wanbubu/pages/products.php">Produk</a>
             <a href="/wanbubu/pages/about.php">Tentang</a>
             <a href="/wanbubu/pages/contact.php">Kontak</a>
+            <a href="/wanbubu/pages/orders.php">📋 Pesanan Saya</a>
         </div>
     </nav>
     

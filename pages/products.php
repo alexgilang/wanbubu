@@ -117,6 +117,7 @@ $products = $productModel->getAll();
             <a href="/wanbubu/pages/products.php">Produk</a>
             <a href="/wanbubu/pages/about.php">Tentang</a>
             <a href="/wanbubu/pages/contact.php">Kontak</a>
+            <a href="/wanbubu/pages/orders.php">📋 Pesanan Saya</a>
             <?php if(Session::isLoggedIn()): ?>
                 <a href="/wanbubu/pages/cart.php">🛒 Keranjang</a>
                 <span>👋 <?php echo htmlspecialchars(Session::get('username')); ?></span>

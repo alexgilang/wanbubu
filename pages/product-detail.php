@@ -105,6 +105,7 @@ if(!$product) {
             <a href="/wanbubu/pages/products.php">Produk</a>
             <?php if(Session::isLoggedIn()): ?>
                 <a href="/wanbubu/pages/cart.php">🛒 Keranjang</a>
+                <a href="/wanbubu/pages/orders.php">📋 Pesanan Saya</a>
                 <span>👋 <?php echo htmlspecialchars(Session::get('username')); ?></span>
                 <a href="/wanbubu/logout.php">Keluar</a>
             <?php else: ?>

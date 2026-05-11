@@ -114,6 +114,7 @@ $total = 0;
         <div class="nav-links">
             <a href="/wanbubu/">Beranda</a>
             <a href="/wanbubu/pages/products.php">Produk</a>
+            <a href="/wanbubu/pages/orders.php">📋 Pesanan Saya</a>
             <span>👋 <?php echo htmlspecialchars(Session::get('username')); ?></span>
             <a href="/wanbubu/logout.php">Keluar</a>
         </div>
