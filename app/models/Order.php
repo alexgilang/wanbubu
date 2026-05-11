@@ -31,10 +31,10 @@ class Order {
     }
     
     public function getUserOrders($userId) {
-        $stmt = $this->db->prepare("SELECT * FROM orders WHERE user_id = :uid ORDER BY created_at DESC");
-        $stmt->execute(['uid' => $userId]);
-        return $stmt->fetchAll();
-    }
+    $stmt = $this->db->prepare("SELECT * FROM orders WHERE user_id = :uid ORDER BY created_at DESC");
+    $stmt->execute(['uid' => $userId]);
+    return $stmt->fetchAll();
+}
     
     public function create($data) {
         $orderNumber = 'ORD-' . date('Ymd') . '-' . rand(10000, 99999);
@@ -86,6 +86,8 @@ class Order {
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    
     
     public function getSalesData($days = 30) {
         $stmt = $this->db->prepare("SELECT DATE(created_at) as tgl, SUM(total_harga) as total FROM orders WHERE status != 'dibatalkan' AND created_at >= DATE_SUB(NOW(), INTERVAL :d DAY) GROUP BY DATE(created_at) ORDER BY tgl ASC");
