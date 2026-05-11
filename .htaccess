@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /wanbubu/
+
+# Redirect /pages/nama ke /app/views/pages/nama
+
+RewriteRule ^pages/(.\*)$ app/views/pages/$1 [L]
+
+# Remove .php extension
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Prevent directory listing
+
+Options -Indexes
